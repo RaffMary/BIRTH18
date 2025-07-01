@@ -15,12 +15,12 @@
     html, body {
       margin: 0;
       padding: 0;
-      height:auto;
+      height: auto;
       min-height: 100vh;
       overflow-x: hidden;      
       overflow-y: auto;
       scroll-behavior: smooth;
-      font-family: sans-serif;
+      font-family: 'Raleway', sans-serif;
     }
 
     body {
@@ -116,25 +116,60 @@
       animation: fadeIn 2s ease-in 1.5s forwards;
     }
 
-
     @keyframes fadeIn {
       from { opacity: 0; } to { opacity: 1; }
     }
+
     @keyframes slideDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* Responsive design per dispositivi mobili */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .rsvp a {
+        display: block;
+        margin: 10px auto;
+        padding: 12px 16px;
+        width: 100%;
+        max-width: 280px;
+        font-size: 14px;
+      }
+
+      .overlay {
+        padding: 20px 10px;
+      }
+
+      body {
+        animation: none;
+        background-attachment: scroll;
+      }
+    }
   </style>
 </head>
 <body>
-  
-
-  
-
   <div class="overlay">
     <div class="container">
       <h1>🎉 Giuseppe compie 18 anni 🎉</h1>
@@ -143,12 +178,12 @@
       <p>🗓️ <strong>Venerdì 1 Agosto 2025</strong></p>
       <p>🕗 <strong>Ore 20:30</strong></p>
       <p>🇬🇧 <strong>London vibes</strong> (no dress code)</p>
-      <p>📩 RSVP via WhatsApp </p>
+      <p>📩 RSVP via WhatsApp</p>
 
       <div class="rsvp">
         <h2>Conferma la tua presenza</h2>
-        <a href="https://wa.me/393927553549?text=Ciao%20Giuseppe!%20Confermo%20la%20mia%20presenza%20alla%20tua%20festa%20🎉" target="_blank">✅ Confermo la presenza</a>
-        <a href="https://wa.me/393927553549?text=Ciao%20Giuseppe!%20Purtroppo%20non%20posso%20venire%20😢" target="_blank">❌ Non posso venire</a>
+        <a href="https://wa.me/393927553549?text=Ciao%20Giuseppe!%20Confermo%20la%20mia%20presenza%20alla%20tua%20festa%20🎉" target="_blank" aria-label="Confermo la mia presenza su WhatsApp">✅ Confermo la presenza</a>
+        <a href="https://wa.me/393927553549?text=Ciao%20Giuseppe!%20Purtroppo%20non%20posso%20venire%20😢" target="_blank" aria-label="Non posso venire">❌ Non posso venire</a>
       </div>
 
       <div class="footer">Invito digitale creato con ❤️</div>
@@ -156,3 +191,4 @@
   </div>
 </body>
 </html>
+
